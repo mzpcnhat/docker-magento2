@@ -7,3 +7,4 @@ network.host: 0.0.0.0
 discovery.zen.minimum_master_nodes: 1
 
 xpack.security.enabled: false
+network.publish_host: ec2-xx-xx-xx-xx.eu-west-1.compute.amazonaws.com
