@@ -18,7 +18,7 @@ services:
             - ${PHP_INI_DIR}/php.ini:/usr/local/etc/php/php.ini
         networks:
             - ${NETWORK_NAME}
-        
+
     mysql:
         image: mgt_mysql:1.0
         container_name: ${CONTAINER_PREFIX}mysql
@@ -46,7 +46,7 @@ services:
         environment:
             PMA_HOST: ${CONTAINER_PREFIX}mysql
         ports:
-            - "8080:80"
+            - "8808:80"
         networks:
             - ${NETWORK_NAME}
 
@@ -60,7 +60,7 @@ services:
             - ${PROJECT_ROOT}:${HTTPD_WORKING_DIR}
             - ${HTTPD_CONF_DIR}/httpd.conf:/usr/local/apache2/conf/httpd.conf
         ports:
-            - "80:80"
+            - "8880:80"
         networks:
             - ${NETWORK_NAME}
 

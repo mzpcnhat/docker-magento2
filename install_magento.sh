@@ -8,7 +8,8 @@ composer config --global http-basic.repo.magento.com ${MAGENTO_PUBLIC_KEY} ${MAG
 
 # Download Magento community edition
 echo "\n\nStart downloading Magento CE project..."
-composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition ./
+composer self-update --1
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition:2.4.1-p1 ./
 
 
 
@@ -39,3 +40,4 @@ bin/magento setup:install \
 --search-engine=elasticsearch7 \
 --elasticsearch-host=${CONTAINER_PREFIX}elasticsearch \
 --elasticsearch-port=9200
+
